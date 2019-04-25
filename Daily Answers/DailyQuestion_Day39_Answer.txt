@@ -1,0 +1,22 @@
+1. How will you take snapshot with selenium grid?
+
+    File src = driver.getScreenshotAs(OutputType.FILE);
+	File desc = new File("./snaps/image1.jpg");
+	FileUtils.copyFile(src, desc);
+In selenium Grid the snap files will be copied from the node system to the system where testscripts are present.
+
+
+2.Suppose there are 2 test cases to be executed in different sessions is that possible? How it possible?
+
+It is possible to run 2 testcases in different sessions using grid.
+1. Start the Hub.
+
+
+2. Start two Nodes each  one with expected browsers.
+
+
+3. give the test scripts to point to Hub.
+
+
+4. Create a testNG XML(Using 2 test scripts) and run the tests 
+

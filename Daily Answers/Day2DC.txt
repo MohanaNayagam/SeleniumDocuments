@@ -1,0 +1,21 @@
+1) Why is the main method static?
+Main method is static because the object is not required to call the static method. If we make the
+main method non-static, JVM will have to create its object first and then call main() method which will lead to
+the extra memory allocation.
+
+2)Can we execute a program without main() method?
+Yes, one of the ways to execute the program without the main method is using static block.
+
+3) Explain about Static variables, Static Method and Static block in Java.
+Static variables:
+The static variable is used to refer to the common property of all objects (that is not unique for each
+object), e.g., The company name of employees, college name of students, etc. Static variable gets memory only
+once in the class area at the time of class loading. Using a static variable makes your program more memory
+efficient (it saves memory). Static variable belongs to the class rather than the object.
+Static Method:
+o A static method belongs to the class rather than the object.
+o There is no need to create the object to call the static methods.
+o A static method can access and change the value of the static variable.
+Static block:
+Static block is used to initialize the static data member. It is executed before the main method, at the
+time of classloading.
